@@ -16,12 +16,14 @@ const Datatable = ({ columns }) => {
 
   useEffect(() => {
     setList(data);
-  }, [data]);
+    console.table(list);
+  }, [data,list]);
 
   const handleDelete = async (id) => {
     try {
       await axios.delete(`/${path}/${id}`);
       setList(list.filter((item) => item._id !== id));
+      
     } catch (err) {}
   };
 
