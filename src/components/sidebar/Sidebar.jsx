@@ -7,7 +7,7 @@ import StoreIcon from "@mui/icons-material/Store";
 
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 
-import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import LocalHotelOutlinedIcon from "@mui/icons-material/LocalHotelOutlined";
 import { Link, useNavigate } from "react-router-dom";
 import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
@@ -57,10 +57,12 @@ const Sidebar = () => {
             </li>
           </Link>
 
-          <li>
-            <AccountCircleOutlinedIcon className="icon" />
-            <span>Profile</span>
-          </li>
+          <Link to="/booking" style={{ textDecoration: "none" }}>
+            <li>
+              <LocalHotelOutlinedIcon className="icon" />
+              <span>Bookings</span>
+            </li>
+          </Link>
           <li onClick={logoutHandler}>
             <ExitToAppIcon className="icon" />
             <span>Logout</span>

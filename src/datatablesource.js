@@ -7,7 +7,11 @@ export const userColumns = [
     renderCell: (params) => {
       return (
         <div className="cellWithImg">
-          <img className="cellImg" src={params.row.img || "https://i.ibb.co/MBtjqXQ/no-avatar.gif"} alt="avatar" />
+          <img
+            className="cellImg"
+            src={params.row.img || "https://i.ibb.co/MBtjqXQ/no-avatar.gif"}
+            alt="avatar"
+          />
           {params.row.username}
         </div>
       );
@@ -62,6 +66,7 @@ export const hotelColumns = [
 
 export const roomColumns = [
   { field: "_id", headerName: "ID", width: 70 },
+
   {
     field: "title",
     headerName: "Title",
@@ -80,6 +85,54 @@ export const roomColumns = [
   {
     field: "maxPeople",
     headerName: "Max People",
+    width: 100,
+  },
+];
+export const bookingColumns = [
+  { field: "_id", headerName: "ID", width: 70 },
+  {
+    field: "username",
+    headerName: "UserName",
+    width: 230,
+  },
+  {
+    field: "bookedhotel",
+    headerName: "BookedHotel",
+    width: 230,
+  },
+  {
+    field: "bookedroom",
+    headerName: "BookedRoom",
+    width: 200,
+  },
+  {
+    field: "bookedroomnumber",
+    headerName: "RoomNumber",
+    width: 100,
+  },
+  {
+    field: "checkindate",
+    headerName: "CheckinDate",
+    width: 100,
+  },
+  {
+    field: "checkoutdate",
+    headerName: "CheckoutDate",
+    width: 100,
+  },
+  {
+    field: "city",
+    headerName: "City",
+    width: 100,
+  },
+  {
+    field: "phone",
+    headerName: "Phone",
+    width: 100,
+  },
+  {
+    field: "amountpaid",
+    headerName: "amountpaid",
     width: 100,
   },
 ];
